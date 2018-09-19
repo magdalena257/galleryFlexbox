@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery using Flexbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Saira', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            width: 100%;
+            background-color: black;
+            color: whitesmoke;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 5px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* padding: 10px; */
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+
+        section div {
+            width: 100%;
+            padding: 10px;
+        }
+
+        div img {
+            width: 100%;
+        }
+
+        @media(min-width:768px) {
+            section div {
+                width: 50%;
+            }
+        }
+
+        @media(min-width:1024px) {
+            section div {
+                width: 33%;
+            }
+
+            section div:last-of-type {
+                margin-right: 33%;
+            }
+        }
+
+        @media(orientation:landscape) {
+            section div {
+                width: 50%;
+            }
+        }
+
+        @media(orientation:landscape) and (min-width:1024px) {
+            section div {
+                width: 33%;
+            }
+
+            section div:last-of-type {
+                margin-right: 33%;
+            }
+        }
+
+        @media(orientation:landscape) and (min-width:1366px) {
+            section div {
+                width: 25%;
+            }
+
+            section div:last-of-type {
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>responsive gallery using flexbox and media queries</h1>
+    <section>
+        <div>
+            <img src="img1.jpg" alt="">
+        </div>
+        <div>
+            <img src="img2.jpg" alt="">
+        </div>
+        <div>
+            <img src="img3.jpg" alt="">
+        </div>
+        <div>
+            <img src="img4.jpg" alt="">
+        </div>
+
+        <div>
+            <img src="img1.jpg" alt="">
+        </div>
+        <div>
+            <img src="img2.jpg" alt="">
+        </div>
+        <div>
+            <img src="img3.jpg" alt="">
+        </div>
+        <div>
+            <img src="img4.jpg" alt="">
+        </div>
+    </section>
+</body>
+
+</html>
